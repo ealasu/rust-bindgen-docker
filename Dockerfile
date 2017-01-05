@@ -2,6 +2,7 @@ FROM ubuntu:16.10
 
 RUN apt-get update && apt-get install -y \
       curl \
+      build-essential \
       llvm-3.9-dev \
       libclang-3.9-dev \
     && rm -rf /var/lib/apt/lists/*
