@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
-    cargo install --git https://github.com/servo/rust-bindgen && \
+    ~/.cargo/bin/rustup show && \
+    ~/.cargo/bin/cargo install --git https://github.com/servo/rust-bindgen && \
     mv ~/.cargo/bin/bindgen /usr/bin/ && \
     rm -rf ~/.cargo ~/.rustup
